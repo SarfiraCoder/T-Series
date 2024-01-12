@@ -6,8 +6,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from InflexMusic import app
-from InflexMusic.utils.formatters import (
+from TitanXMusic import app
+from TitanXMusic.utils.formatters import (
     check_duration,
     convert_bytes,
     get_readable_time,
@@ -37,9 +37,9 @@ class TeleAPI:
         try:
             file_name = file.file_name
             if file_name is None:
-                file_name = "ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴅɪᴏ" if audio else "ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏ"
+                file_name = "Telegram Audio" if audio else "Telegram Video"
         except:
-            file_name = "ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴅɪᴏ" if audio else "ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏ"
+            file_name = "Telegram Audio" if audio else "Telegram Video"
         return file_name
 
     async def get_duration(self, file):
