@@ -3,10 +3,10 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from InflexMusic import YouTube, app
-from InflexMusic.core.call import Inflex
-from InflexMusic.misc import SUDOERS, db
-from InflexMusic.utils.database import (
+from TitanXMusic import YouTube, app
+from TitanXMusic.core.call import Inflex
+from TitanXMusic.misc import SUDOERS, db
+from TitanXMusic.utils.database import (
     get_active_chats,
     get_lang,
     get_upvote_count,
@@ -17,11 +17,11 @@ from InflexMusic.utils.database import (
     music_on,
     set_loop,
 )
-from InflexMusic.utils.decorators.language import languageCB
-from InflexMusic.utils.formatters import seconds_to_min
-from InflexMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
-from InflexMusic.utils.stream.autoclear import auto_clean
-from InflexMusic.utils.thumbnails import get_thumb
+from TitanXMusic.utils.decorators.language import languageCB
+from TitanXMusic.utils.formatters import seconds_to_min
+from TitanXMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
+from TitanXMusic.utils.stream.autoclear import auto_clean
+from TitanXMusic.utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
     SOUNCLOUD_IMG_URL,
@@ -135,7 +135,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_1"], show_alert=True)
         await CallbackQuery.answer()
         await music_off(chat_id)
-        await Inflex.pause_stream(chat_id)
+        await Titan.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_2"].format(mention), reply_markup=close_markup(_)
         )
@@ -144,13 +144,13 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_3"], show_alert=True)
         await CallbackQuery.answer()
         await music_on(chat_id)
-        await Inflex.resume_stream(chat_id)
+        await Titan.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_4"].format(mention), reply_markup=close_markup(_)
         )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
-        await Inflex.stop_stream(chat_id)
+        await Titan.stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await CallbackQuery.message.reply_text(
             _["admin_5"].format(mention), reply_markup=close_markup(_)
@@ -176,7 +176,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         reply_markup=close_markup(_),
                     )
                     try:
-                        return await Inflex.stop_stream(chat_id)
+                        return await Titan.stop_stream(chat_id)
                     except:
                         return
             except:
@@ -190,7 +190,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         ),
                         reply_markup=close_markup(_),
                     )
-                    return await Inflex.stop_stream(chat_id)
+                    return await Titan.stop_stream(chat_id)
                 except:
                     return
         else:
@@ -258,7 +258,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 image = None
             try:
-                await Inflex.skip_stream(chat_id, file_path, video=status, image=image)
+                await Titan.skip_stream(chat_id, file_path, video=status, image=image)
             except:
                 return await mystic.edit_text(_["call_6"])
             button = stream_markup(_, chat_id)
@@ -279,7 +279,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await mystic.delete()
         elif "index_" in queued:
             try:
-                await Inflex.skip_stream(chat_id, videoid, video=status)
+                await Titan.skip_stream(chat_id, videoid, video=status)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             button = stream_markup(_, chat_id)
@@ -302,7 +302,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 except:
                     image = None
             try:
-                await Inflex.skip_stream(chat_id, queued, video=status, image=image)
+                await Titan.skip_stream(chat_id, queued, video=status, image=image)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             if videoid == "telegram":
