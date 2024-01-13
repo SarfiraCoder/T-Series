@@ -6,22 +6,22 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from InflexMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from InflexMusic.core.call import Inflex
-from InflexMusic.utils import seconds_to_min, time_to_seconds
-from InflexMusic.utils.channelplay import get_channeplayCB
-from InflexMusic.utils.decorators.language import languageCB
-from InflexMusic.utils.decorators.play import PlayWrapper
-from InflexMusic.utils.formatters import formats
-from InflexMusic.utils.inline import (
+from TitanXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from TitanXMusic.core.call import Titan
+from TitanXMusic.utils import seconds_to_min, time_to_seconds
+from TitanXMusic.utils.channelplay import get_channeplayCB
+from TitanXMusic.utils.decorators.language import languageCB
+from TitanXMusic.utils.decorators.play import PlayWrapper
+from TitanXMusic.utils.formatters import formats
+from TitanXMusic.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from InflexMusic.utils.logger import play_logs
-from InflexMusic.utils.stream.stream import stream
+from TitanXMusic.utils.logger import play_logs
+from TitanXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
@@ -501,8 +501,8 @@ async def play_music(client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@app.on_callback_query(filters.regex("InflexmousAdmin") & ~BANNED_USERS)
-async def Inflexmous_check(client, CallbackQuery):
+@app.on_callback_query(filters.regex("TitaniumAdmin") & ~BANNED_USERS)
+async def Titanium_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
@@ -512,7 +512,7 @@ async def Inflexmous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("InflexPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("TitanPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
