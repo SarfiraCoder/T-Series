@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from InflexMusic import YouTube, app
-from InflexMusic.utils.channelplay import get_channeplayCB
-from InflexMusic.utils.decorators.language import languageCB
-from InflexMusic.utils.stream.stream import stream
+from TitanXMusic import YouTube, app
+from TitanXMusic.utils.channelplay import get_channeplayCB
+from TitanXMusic.utils.decorators.language import languageCB
+from TitanXMusic.utils.stream.stream import stream
 from config import BANNED_USERS
 
 
