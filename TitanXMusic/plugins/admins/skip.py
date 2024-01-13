@@ -2,14 +2,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from InflexMusic import YouTube, app
-from InflexMusic.core.call import Inflex
-from InflexMusic.misc import db
-from InflexMusic.utils.database import get_loop
-from InflexMusic.utils.decorators import AdminRightsCheck
-from InflexMusic.utils.inline import close_markup, stream_markup
-from InflexMusic.utils.stream.autoclear import auto_clean
-from InflexMusic.utils.thumbnails import get_thumb
+from TitanXMusic import YouTube, app
+from TitanXMusic.core.call import Inflex
+from TitanXMusic.misc import db
+from TitanXMusic.utils.database import get_loop
+from TitanXMusic.utils.decorators import AdminRightsCheck
+from TitanXMusic.utils.inline import close_markup, stream_markup
+from TitanXMusic.utils.stream.autoclear import auto_clean
+from TitanXMusic.utils.thumbnails import get_thumb
 from config import BANNED_USERS
 
 
@@ -48,7 +48,7 @@ async def skip(cli, message: Message, _, chat_id):
                                         ),
                                         reply_markup=close_markup(_),
                                     )
-                                    await Inflex.stop_stream(chat_id)
+                                    await Titan.stop_stream(chat_id)
                                 except:
                                     return
                                 break
@@ -75,7 +75,7 @@ async def skip(cli, message: Message, _, chat_id):
                     reply_markup=close_markup(_),
                 )
                 try:
-                    return await Inflex.stop_stream(chat_id)
+                    return await Titan.stop_stream(chat_id)
                 except:
                     return
         except:
@@ -86,7 +86,7 @@ async def skip(cli, message: Message, _, chat_id):
                     ),
                     reply_markup=close_markup(_),
                 )
-                return await Inflex.stop_stream(chat_id)
+                return await Titan.stop_stream(chat_id)
             except:
                 return
     queued = check[0]["file"]
@@ -111,7 +111,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             image = None
         try:
-            await Inflex.skip_stream(chat_id, link, video=status, image=image)
+            await Titan.skip_stream(chat_id, link, video=status, image=image)
         except:
             return await message.reply_text(_["call_6"])
         button = stream_markup(_, chat_id)
@@ -144,7 +144,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             image = None
         try:
-            await Inflex.skip_stream(chat_id, file_path, video=status, image=image)
+            await Titan.skip_stream(chat_id, file_path, video=status, image=image)
         except:
             return await mystic.edit_text(_["call_6"])
         button = stream_markup(_, chat_id)
@@ -164,7 +164,7 @@ async def skip(cli, message: Message, _, chat_id):
         await mystic.delete()
     elif "index_" in queued:
         try:
-            await Inflex.skip_stream(chat_id, videoid, video=status)
+            await Titan.skip_stream(chat_id, videoid, video=status)
         except:
             return await message.reply_text(_["call_6"])
         button = stream_markup(_, chat_id)
@@ -186,7 +186,7 @@ async def skip(cli, message: Message, _, chat_id):
             except:
                 image = None
         try:
-            await Inflex.skip_stream(chat_id, queued, video=status, image=image)
+            await Titan.skip_stream(chat_id, queued, video=status, image=image)
         except:
             return await message.reply_text(_["call_6"])
         if videoid == "telegram":
