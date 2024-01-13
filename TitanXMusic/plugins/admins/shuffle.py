@@ -3,10 +3,10 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.misc import db
-from InflexMusic.utils.decorators import AdminRightsCheck
-from InflexMusic.utils.inline import close_markup
+from TitanXMusic import app
+from TitanXMusic.misc import db
+from TitanXMusic.utils.decorators import AdminRightsCheck
+from TitanXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
