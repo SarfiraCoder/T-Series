@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from InflexMusic import app
-from InflexMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from InflexMusic.utils.decorators import language
-from InflexMusic.utils.inline.settings import playmode_users_markup
+from TitanXMusic import app
+from TitanXMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from TitanXMusic.utils.decorators import language
+from TitanXMusic.utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS
 
 
