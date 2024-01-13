@@ -9,9 +9,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from InflexMusic import YouTube, app
-from InflexMusic.misc import SUDOERS
-from InflexMusic.utils.database import (
+from TitanXMusic import YouTube, app
+from TitanXMusic.misc import SUDOERS
+from TitanXMusic.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -20,7 +20,7 @@ from InflexMusic.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from InflexMusic.utils.inline import botplaylist_markup
+from TitanXMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_GROUP, adminlist
 from strings import get_string
 
