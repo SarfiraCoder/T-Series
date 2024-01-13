@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.misc import SUDOERS
-from InflexMusic.utils.database import autoend_off, autoend_on
+from TitanXMusic import app
+from TitanXMusic.misc import SUDOERS
+from TitanXMusic.utils.database import autoend_off, autoend_on
 
 
 @app.on_message(filters.command("autoend") & SUDOERS)
