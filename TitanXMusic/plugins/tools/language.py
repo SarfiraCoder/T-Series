@@ -2,9 +2,9 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 
-from InflexMusic import app
-from InflexMusic.utils.database import get_lang, set_lang
-from InflexMusic.utils.decorators import ActualAdminCB, language, languageCB
+from TitanXMusic import app
+from TitanXMusic.utils.database import get_lang, set_lang
+from TitanXMusic.utils.decorators import ActualAdminCB, language, languageCB
 from config import BANNED_USERS
 from strings import get_string, languages_present
 
