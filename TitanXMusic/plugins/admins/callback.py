@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from TitanXMusic import YouTube, app
-from TitanXMusic.core.call import Inflex
+    from TitanXMusic.core.call import Titan
 from TitanXMusic.misc import SUDOERS, db
 from TitanXMusic.utils.database import (
     get_active_chats,
@@ -222,7 +222,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 image = None
             try:
-                await Inflex.skip_stream(chat_id, link, video=status, image=image)
+                await Titan.skip_stream(chat_id, link, video=status, image=image)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             button = stream_markup(_, chat_id)
