@@ -4,11 +4,11 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.core.call import Inflex
-from InflexMusic.utils import bot_sys_stats
-from InflexMusic.utils.decorators.language import language
-from InflexMusic.utils.inline import supp_markup
+from TitanXMusic import app
+from TitanXMusic.core.call import Titan
+from TitanXMusic.utils import bot_sys_stats
+from TitanXMusic.utils.decorators.language import language
+from TitanXMusic.utils.inline import supp_markup
 from config import BANNED_USERS, PING_IMG_URL
 
 
@@ -20,7 +20,7 @@ async def ping_com(client, message: Message, _):
         photo=random.choice(PING_IMG_URL),
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await Inflex.ping()
+    pytgping = await Titan.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
