@@ -11,13 +11,13 @@ from pytgcalls.__version__ import __version__ as pytgver
 
 import config
 from config import STATS_IMG_URL
-from InflexMusic import app
-from InflexMusic.core.userbot import assistants
-from InflexMusic.misc import SUDOERS, mongodb
-from InflexMusic.plugins import ALL_MODULES
-from InflexMusic.utils.database import get_served_chats, get_served_users, get_sudoers
-from InflexMusic.utils.decorators.language import language, languageCB
-from InflexMusic.utils.inline.stats import back_stats_buttons, stats_buttons
+from TitanXMusic import app
+from TitanXMusic.core.userbot import assistants
+from TitanXMusic.misc import SUDOERS, mongodb
+from TitanXMusic.plugins import ALL_MODULES
+from TitanXMusic.utils.database import get_served_chats, get_served_users, get_sudoers
+from TitanXMusic.utils.decorators.language import language, languageCB
+from TitanXMusic.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
 from config import OWNER_ID
 
