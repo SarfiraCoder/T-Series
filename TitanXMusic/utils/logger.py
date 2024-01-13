@@ -1,7 +1,7 @@
 from pyrogram.enums import ParseMode
 
-from InflexMusic import app
-from InflexMusic.utils.database import is_on_off
+from TitanXMusic import app
+from TitanXMusic.utils.database import is_on_off
 from config import LOG_GROUP_ID
 
 
