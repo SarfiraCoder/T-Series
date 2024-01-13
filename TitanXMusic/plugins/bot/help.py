@@ -3,11 +3,11 @@ from typing import Union
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from InflexMusic import app
-from InflexMusic.utils import help_pannel
-from InflexMusic.utils.database import get_lang
-from InflexMusic.utils.decorators.language import LanguageStart, languageCB
-from InflexMusic.utils.inline.help import help_back_markup, private_help_panel
+from TitanXMusic import app
+from TitanXMusic.utils import help_pannel
+from TitanXMusic.utils.database import get_lang
+from TitanXMusic.utils.decorators.language import LanguageStart, languageCB
+from TitanXMusic.utils.inline.help import help_back_markup, private_help_panel
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
 from strings import get_string, helpers
 
