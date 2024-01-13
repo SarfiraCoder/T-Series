@@ -5,12 +5,12 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
-from InflexMusic import app
-from InflexMusic.core.call import Inflex
-from InflexMusic.misc import db
-from InflexMusic.utils.database import get_assistant, get_authuser_names, get_cmode
-from InflexMusic.utils.decorators import ActualAdminCB, AdminActual, language
-from InflexMusic.utils.formatters import alpha_to_int, get_readable_time
+from TitanXMusic import app
+from TitanXMusic.core.call import Titan
+from TitanXMusic.misc import db
+from TitanXMusic.utils.database import get_assistant, get_authuser_names, get_cmode
+from TitanXMusic.utils.decorators import ActualAdminCB, AdminActual, language
+from TitanXMusic.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
 
 rel = {}
@@ -53,7 +53,7 @@ async def restartbot(client, message: Message, _):
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
-        await Inflex.stop_stream_force(message.chat.id)
+        await Titan.stop_stream_force(message.chat.id)
     except:
         pass
     userbot = await get_assistant(message.chat.id)
@@ -80,7 +80,7 @@ async def restartbot(client, message: Message, _):
             pass
         try:
             db[chat_id] = []
-            await Inflex.stop_stream_force(chat_id)
+            await Titan.stop_stream_force(chat_id)
         except:
             pass
     return await mystic.edit_text(_["reload_5"].format(app.mention))
