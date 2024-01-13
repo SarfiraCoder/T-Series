@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.misc import SUDOERS
-from InflexMusic.utils.database import add_sudo, remove_sudo
-from InflexMusic.utils.decorators.language import language
-from InflexMusic.utils.extraction import extract_user
-from InflexMusic.utils.inline import close_markup
+from TitanXMusic import app
+from TitanXMusic.misc import SUDOERS
+from TitanXMusic.utils.database import add_sudo, remove_sudo
+from TitanXMusic.utils.decorators.language import language
+from TitanXMusic.utils.extraction import extract_user
+from TitanXMusic.utils.inline import close_markup
 from config import BANNED_USERS, OWNER_ID
 
 
