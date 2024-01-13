@@ -4,10 +4,10 @@ import speedtest
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
+from TitanXMusic import app
 from config import OWNER_ID
-from InflexMusic.misc import SUDOERS
-from InflexMusic.utils.decorators.language import language
+from TitanXMusic.misc import SUDOERS
+from TitanXMusic.utils.decorators.language import language
 
 
 def testspeed(m, _):
