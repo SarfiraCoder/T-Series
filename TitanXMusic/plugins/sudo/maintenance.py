@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.misc import SUDOERS
-from InflexMusic.utils.database import (
+from TitanXMusic import app
+from TitanXMusic.misc import SUDOERS
+from TitanXMusic.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,
