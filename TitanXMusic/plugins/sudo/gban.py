@@ -4,11 +4,11 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.misc import SUDOERS
+from TitanXMusic import app
+from TitanXMusic.misc import SUDOERS
 from config import OWNER_ID
-from InflexMusic.utils import get_readable_time
-from InflexMusic.utils.database import (
+from TitanXMusic.utils import get_readable_time
+from TitanXMusic.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -16,8 +16,8 @@ from InflexMusic.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from InflexMusic.utils.decorators.language import language
-from InflexMusic.utils.extraction import extract_user
+from TitanXMusic.utils.decorators.language import language
+from TitanXMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
