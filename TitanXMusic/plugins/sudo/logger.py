@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from InflexMusic import app
-from InflexMusic.misc import SUDOERS
-from InflexMusic.utils.database import add_off, add_on
-from InflexMusic.utils.decorators.language import language
+from TitanXMusic import app
+from TitanXMusic.misc import SUDOERS
+from TitanXMusic.utils.database import add_off, add_on
+from TitanXMusic.utils.decorators.language import language
 
 
 @app.on_message(filters.command(["logger"]) & SUDOERS)
