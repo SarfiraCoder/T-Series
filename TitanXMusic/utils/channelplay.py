@@ -1,5 +1,5 @@
-from InflexMusic import app
-from InflexMusic.utils.database import get_cmode
+from TitanXMusic import app
+from TitanXMusic.utils.database import get_cmode
 
 
 async def get_channeplayCB(_, command, CallbackQuery):
