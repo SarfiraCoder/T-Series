@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import YouTube, app
-from InflexMusic.core.call import Inflex
-from InflexMusic.misc import db
-from InflexMusic.utils import AdminRightsCheck, seconds_to_min
-from InflexMusic.utils.inline import close_markup
+from TitanXMusic import YouTube, app
+from TitanXMusic.core.call import Inflex
+from TitanXMusic.misc import db
+from TitanXMusic.utils import AdminRightsCheck, seconds_to_min
+from TitanXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
@@ -56,7 +56,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if "index_" in file_path:
         file_path = playing[0]["vidid"]
     try:
-        await Inflex.seek_stream(
+        await Titan.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),
