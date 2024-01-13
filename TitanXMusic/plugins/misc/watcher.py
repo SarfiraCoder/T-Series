@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from TitanXMusic import app
-from TitanXMusic.core.call import Inflex
+from TitanXMusic.core.call import Titan
 
 welcome = 20
 close = 30
