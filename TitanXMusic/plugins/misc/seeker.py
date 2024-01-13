@@ -1,7 +1,7 @@
 import asyncio
 
-from InflexMusic.misc import db
-from InflexMusic.utils.database import get_active_chats, is_music_playing
+from TitanXMusic.misc import db
+from TitanXMusic.utils.database import get_active_chats, is_music_playing
 
 
 async def timer():
