@@ -8,10 +8,10 @@ from youtubesearchpython.__future__ import VideosSearch
 
 import config
 from config import START_IMG_URL
-from InflexMusic import app
-from InflexMusic.misc import _boot_
-from InflexMusic.plugins.sudo.sudoers import sudoers_list
-from InflexMusic.utils.database import (
+from TitanXMusic import app
+from TitanXMusic.misc import _boot_
+from TitanXMusic.plugins.sudo.sudoers import sudoers_list
+from TitanXMusic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -19,9 +19,9 @@ from InflexMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from InflexMusic.utils.decorators.language import LanguageStart
-from InflexMusic.utils.formatters import get_readable_time
-from InflexMusic.utils.inline import help_pannel, private_panel, start_panel
+from TitanXMusic.utils.decorators.language import LanguageStart
+from TitanXMusic.utils.formatters import get_readable_time
+from TitanXMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
