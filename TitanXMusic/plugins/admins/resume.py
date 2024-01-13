@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.core.call import Inflex
-from InflexMusic.utils.database import is_music_playing, music_on
-from InflexMusic.utils.decorators import AdminRightsCheck
-from InflexMusic.utils.inline import close_markup
+from TitanXMusic import app
+from TitanXMusic.core.call import Titan
+from TitanXMusic.utils.database import is_music_playing, music_on
+from TitanXMusic.utils.decorators import AdminRightsCheck
+from TitanXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
