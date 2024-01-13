@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.misc import SUDOERS
-from InflexMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from InflexMusic.utils.decorators.language import language
+from TitanXMusic import app
+from TitanXMusic.misc import SUDOERS
+from TitanXMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from TitanXMusic.utils.decorators.language import language
 from config import BANNED_USERS
 
 
