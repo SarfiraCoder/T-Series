@@ -8,8 +8,8 @@ from pyrogram.types import (
     Message,
 )
 
-from InflexMusic import app
-from InflexMusic.utils.database import (
+from TitanXMusic import app
+from TitanXMusic.utils.database import (
     add_nonadmin_chat,
     get_authuser,
     get_authuser_names,
@@ -25,15 +25,15 @@ from InflexMusic.utils.database import (
     skip_off,
     skip_on,
 )
-from InflexMusic.utils.decorators.admins import ActualAdminCB
-from InflexMusic.utils.decorators.language import language, languageCB
-from InflexMusic.utils.inline.settings import (
+from TitanXMusic.utils.decorators.admins import ActualAdminCB
+from TitanXMusic.utils.decorators.language import language, languageCB
+from TitanXMusic.utils.inline.settings import (
     auth_users_markup,
     playmode_users_markup,
     setting_markup,
     vote_mode_markup,
 )
-from InflexMusic.utils.inline.start import private_panel
+from TitanXMusic.utils.inline.start import private_panel
 from config import BANNED_USERS, OWNER_ID
 
 
