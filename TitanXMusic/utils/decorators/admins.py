@@ -1,9 +1,9 @@
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from InflexMusic import app
-from InflexMusic.misc import SUDOERS, db
-from InflexMusic.utils.database import (
+from TitanXMusic import app
+from TitanXMusic.misc import SUDOERS, db
+from TitanXMusic.utils.database import (
     get_authuser_names,
     get_cmode,
     get_lang,
