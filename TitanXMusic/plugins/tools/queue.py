@@ -6,12 +6,12 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from InflexMusic import app
-from InflexMusic.misc import db
-from InflexMusic.utils import InflexBin, get_channeplayCB, seconds_to_min
-from InflexMusic.utils.database import get_cmode, is_active_chat, is_music_playing
-from InflexMusic.utils.decorators.language import language, languageCB
-from InflexMusic.utils.inline import queue_back_markup, queue_markup
+from TitanXMusic import app
+from TitanXMusic.misc import db
+from TitanXMusic.utils import TitanBin, get_channeplayCB, seconds_to_min
+from TitanXMusic.utils.database import get_cmode, is_active_chat, is_music_playing
+from TitanXMusic.utils.decorators.language import language, languageCB
+from TitanXMusic.utils.inline import queue_back_markup, queue_markup
 from config import BANNED_USERS
 
 basic = {}
@@ -176,7 +176,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             return await CallbackQuery.edit_message_text(msg, reply_markup=buttons)
         if "✨" in msg:
             msg = msg.replace("✨", "")
-        link = await InflexBin(msg)
+        link = await TitanBin(msg)
         med = InputMediaPhoto(media=link, caption=_["queue_3"].format(link))
         await CallbackQuery.edit_message_media(media=med, reply_markup=buttons)
     else:
