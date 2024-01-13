@@ -11,15 +11,15 @@ from pyrogram import filters
 
 import config
 from config import OWNER_ID
-from InflexMusic import app
-from InflexMusic.misc import HAPP, SUDOERS, XCB
-from InflexMusic.utils.database import (
+from TitanXMusic import app
+from TitanXMusic.misc import HAPP, SUDOERS, XCB
+from TitanXMusic.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from InflexMusic.utils.decorators.language import language
-from InflexMusic.utils.pastebin import InflexBin
+from TitanXMusic.utils.decorators.language import language
+from TitanXMusic.utils.pastebin import InflexBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -113,13 +113,13 @@ async def update_(client, message, _):
 
 @app.on_message(filters.command(["restart"]) & SUDOERS)
 async def restart_(_, message):
-    response = await message.reply_text("𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝗂𝗇𝗀 ...")
+    response = await message.reply_text("𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝗂𝗇𝗀...")
     ac_chats = await get_active_chats()
     for x in ac_chats:
         try:
             await app.send_message(
                 chat_id=int(x),
-                text=f"{app.mention} 𝖨𝗌 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝗂𝗇𝗀 ...\n\n𝖸𝗈𝗎 𝖢𝖺𝗇 𝖲𝗍𝖺𝗋𝗍 𝖯𝗅𝖺𝗒𝗂𝗇𝗀 𝖠𝖿𝗍𝖾𝗋 15 - 20 𝖲𝖾𝖼𝗈𝗇𝖽𝗌 .",
+                text=f"{app.mention} 𝖨𝗌 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝗂𝗇𝗀...\n\n𝖸𝗈𝗎 𝖢𝖺𝗇 𝖲𝗍𝖺𝗋𝗍 𝖯𝗅𝖺𝗒𝗂𝗇𝗀 𝖠𝖿𝗍𝖾𝗋 15 - 20 𝖲𝖾𝖼𝗈𝗇𝖽𝗌 .",
             )
             await remove_active_chat(x)
             await remove_active_video_chat(x)
@@ -135,4 +135,4 @@ async def restart_(_, message):
     await response.edit_text(
         "» 𝖱𝖾𝗌𝗍𝖺𝗋𝗍 𝖯𝗋𝗈𝖼𝖾𝗌𝗌 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 , 𝖯𝗅𝖾𝖺𝗌𝖾 𝖶𝖺𝗂𝗍 𝖥𝗈𝗋 𝖥𝖾𝗐 𝖲𝖾𝖼𝗈𝗇𝖽𝗌 𝖴𝗇𝗍𝗂𝗅 𝖳𝗁𝖾 𝖡𝗈𝗍 𝖲𝗍𝖺𝗋𝗍𝗌 ...."
     )
-    os.system(f"kill -9 {os.getpid()} && python3 -m InflexMusic")
+    os.system(f"kill -9 {os.getpid()} && python3 -m TitanXMusic")
