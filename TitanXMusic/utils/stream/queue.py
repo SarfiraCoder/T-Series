@@ -1,8 +1,8 @@
 import asyncio
 from typing import Union
 
-from InflexMusic.misc import db
-from InflexMusic.utils.formatters import check_duration, seconds_to_min
+from TitanXMusic.misc import db
+from TitanXMusic.utils.formatters import check_duration, seconds_to_min
 from config import autoclean, time_to_seconds
 
 
