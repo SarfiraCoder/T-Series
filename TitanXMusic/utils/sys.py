@@ -2,8 +2,8 @@ import time
 
 import psutil
 
-from InflexMusic.misc import _boot_
-from InflexMusic.utils.formatters import get_readable_time
+from TitanXMusic.misc import _boot_
+from TitanXMusic.utils.formatters import get_readable_time
 
 
 async def bot_sys_stats():
