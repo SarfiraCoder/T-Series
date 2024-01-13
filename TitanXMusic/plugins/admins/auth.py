@@ -1,16 +1,16 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.utils import extract_user, int_to_alpha
-from InflexMusic.utils.database import (
+from TitanXMusic import app
+from TitanXMusic.utils import extract_user, int_to_alpha
+from TitanXMusic.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from InflexMusic.utils.decorators import AdminActual, language
-from InflexMusic.utils.inline import close_markup
+from TitanXMusic.utils.decorators import AdminActual, language
+from TitanXMusic.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 
 
