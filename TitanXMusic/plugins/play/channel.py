@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
 
-from InflexMusic import app
-from InflexMusic.utils.database import set_cmode
-from InflexMusic.utils.decorators.admins import AdminActual
+from TitanXMusic import app
+from TitanXMusic.utils.database import set_cmode
+from TitanXMusic.utils.decorators.admins import AdminActual
 from config import BANNED_USERS
 
 
