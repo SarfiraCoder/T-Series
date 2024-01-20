@@ -32,7 +32,7 @@ async def stream(
     if not result:
         return
     if forceplay:
-        await Inflex.force_stop_stream(chat_id)
+        await Titan.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
@@ -409,7 +409,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Inflex.join_call(
+            await Titan.join_call(
                 chat_id,
                 original_chat_id,
                 link,
