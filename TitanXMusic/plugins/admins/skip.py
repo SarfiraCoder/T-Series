@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
 from TitanXMusic import YouTube, app
-from TitanXMusic.core.call import Inflex
+from TitanXMusic.core.call import Titan
 from TitanXMusic.misc import db
 from TitanXMusic.utils.database import get_loop
 from TitanXMusic.utils.decorators import AdminRightsCheck
