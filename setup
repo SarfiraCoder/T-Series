@@ -24,17 +24,17 @@ update() {
 	pprint "\n\nUpdating package list.. "
 	sudo apt update 2>&1 | grep "can be upgraded" &>/dev/null
 	if [ $? -eq 0 ]; then
-		pprint "UPDATE AVAILABLE" "cgreen"
+		pprint "Update Available" "cgreen"
 		pprint "\n\nDo you want to automatically upgrade (y/n)?"
 		if yesnoprompt; then
 			pprint "\n\nUpgrading packages.. "
 			sudo apt upgrade -y &>/dev/null &&
-			pprint "DONE!\n\n" "cgreen" || (pprint "FAIL.\n\n" "cred"; exit 1)
+			pprint "Done!\n\n" "cgreen" || (pprint "FAIL.\n\n" "cred"; exit 1)
 		else
 			echo
 		fi
 	else
-		pprint "ALREADY UP TO DATE\n\n" "cgreen"
+		pprint "Already Updated!\n\n" "cgreen"
 	fi
 }
 
@@ -48,10 +48,10 @@ packages(){
 	if ! command -v ffmpeg &>/dev/null; then
 		pprint "Couldn't found ffmpeg, installing now..."
 		if sudo apt install ffmpeg -y &>/dev/null;then
-			pprint "SUCCESS.\n\n" "cgreen"
+			pprint "Success.\n\n" "cgreen"
 		else
-			pprint "FAIL.\n\n" "cred"
-			pprint "You need to install ffmpeg manually in order to deploy InflexMusic, exiting...\n" "cblue"
+			pprint "Failed.\n\n" "cred"
+			pprint "You need to install ffmpeg manually in order to deploy TitanXMusic, exiting...\n" "cblue"
 			exit 1
 		fi
 	fi
@@ -68,7 +68,7 @@ node(){
 	curl -fssL https://deb.nodesource.com/setup_19.x | sudo -E bash - &>nodelog.txt &&
 	sudo apt install -y nodejs &>>nodelog.txt &&
 	sudo npm i -g npm &>>nodelog.txt &&
-	pprint "SUCCESS!\n" "cgreen" || (pprint "FAIL.\n" "cred"; exit 1)
+	pprint "SUCCESS!\n" "cgreen" || (pprint "Fail.\n" "cred"; exit 1)
 }
 
 
