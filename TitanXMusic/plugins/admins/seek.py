@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from TitanXMusic import YouTube, app
-from TitanXMusic.core.call import Inflex
+from TitanXMusic.core.call import Titan
 from TitanXMusic.misc import db
 from TitanXMusic.utils import AdminRightsCheck, seconds_to_min
 from TitanXMusic.utils.inline import close_markup
