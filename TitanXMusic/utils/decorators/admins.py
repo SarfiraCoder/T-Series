@@ -24,7 +24,7 @@ def AdminRightsCheck(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} 𝖨𝗌 𝖴𝗇𝖽𝖾𝗋 𝖬𝖺𝗂𝗇𝗍𝖾𝗇𝖺𝗇𝖼𝖾 , 𝖵𝗂𝗌𝗂𝗍 <a href={SUPPORT_GROUP}>𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖢𝗁𝖺𝗍</a> 𝖥𝗈𝗋 𝖪𝗇𝗈𝗐𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝖺𝗌𝗈𝗇 .",
+                    text=f"{app.mention} is under Maintenance, visit <a href={SUPPORT_GROUP}>support chat</a> to know the reason.",
                     disable_web_page_preview=True,
                 )
 
@@ -43,7 +43,7 @@ def AdminRightsCheck(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝖧𝗈𝗐 𝖳𝗈 𝖥𝗂𝗑 ?",
+                            text="☞ How To Fix ?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -118,7 +118,7 @@ def AdminActual(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} 𝖨𝗌 𝖴𝗇𝖽𝖾𝗋 𝖬𝖺𝗂𝗇𝗍𝖾𝗇𝖺𝗇𝖼𝖾 , 𝖵𝗂𝗌𝗂𝗍 <a href={SUPPORT_GROUP}>𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖢𝗁𝖺𝗍</a> 𝖥𝗈𝗋 𝖪𝗇𝗈𝗐𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝖺𝗌𝗈𝗇 .",
+                    text=f"{app.mention} is under Maintenance, visit <a href={SUPPORT_GROUP}>support chat</a> to know the reason.",
                     disable_web_page_preview=True,
                 )
 
@@ -137,7 +137,7 @@ def AdminActual(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝖧𝗈𝗐 𝖳𝗈 𝖥𝗂𝗑 ?",
+                            text="☞ How To Fix ?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -163,7 +163,7 @@ def ActualAdminCB(mystic):
         if await is_maintenance() is False:
             if CallbackQuery.from_user.id not in SUDOERS:
                 return await CallbackQuery.answer(
-                    f"{app.mention} 𝖨𝗌 𝖴𝗇𝖽𝖾𝗋 𝖬𝖺𝗂𝗇𝗍𝖾𝗇𝖺𝗇𝖼𝖾 , 𝖵𝗂𝗌𝗂𝗍 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖢𝗁𝖺𝗍 𝖥𝗈𝗋 𝖪𝗇𝗈𝗐𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝖺𝗌𝗈𝗇 .",
+                    f"{app.mention} is under Maintenance, visit <a href={SUPPORT_GROUP}>support chat</a> to know the reason.",
                     show_alert=True,
                 )
         try:
