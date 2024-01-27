@@ -59,7 +59,7 @@ async def braodcast_message(client, message, _):
                     await asyncio.sleep(fw.x)
                 except:
                     continue
-            await message.reply_text(f"☞ 𝖡𝗋𝗈𝖺𝖽𝖼𝖺𝗌𝗍𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝖳𝗈 {sent_chats}  𝖢𝗁𝖺𝗍𝗌 .")
+            await message.reply_text(f"☞ 𝖡𝗋𝗈𝖺𝖽𝖼𝖺𝗌𝗍𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝖳𝗈 {sent_chats}  𝖢𝗁𝖺𝗍𝗌.")
 
         if "-wfuser" in message.text:
             # Broadcasting to users
@@ -77,7 +77,7 @@ async def braodcast_message(client, message, _):
                     await asyncio.sleep(fw.x)
                 except:
                     continue
-            await message.reply_text(f"☞ 𝖡𝗋𝗈𝖺𝖽𝖼𝖺𝗌𝗍𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝖳𝗈 {sent_users} 𝖴𝗌𝖾𝗋𝗌 .")
+            await message.reply_text(f"☞ 𝖡𝗋𝗈𝖺𝖽𝖼𝖺𝗌𝗍𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝖳𝗈 {sent_users} 𝖴𝗌𝖾𝗋𝗌.")
 
         IS_BROADCASTING = False
         return
