@@ -127,7 +127,7 @@ async def forceclose_command(_, CallbackQuery):
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(
-                "> 𝖨𝗍 𝖶𝗂𝗅𝗅 𝖡𝖾 𝖡𝖾𝗍𝗍𝖾𝗋 𝖨𝖿 𝖸𝗈𝗎 𝖲𝗍𝖺𝗒 𝖨𝗇 𝖸𝗈𝗎𝗋 𝖫𝗂𝗆𝗂𝗍𝗌 .", show_alert=True
+                "☞ 𝖨𝗍 𝖶𝗂𝗅𝗅 𝖡𝖾 𝖡𝖾𝗍𝗍𝖾𝗋 𝖨𝖿 𝖸𝗈𝗎 𝖲𝗍𝖺𝗒 𝖨𝗇 𝖸𝗈𝗎𝗋 𝖫𝗂𝗆𝗂𝗍𝗌.", show_alert=True
             )
         except:
             return
