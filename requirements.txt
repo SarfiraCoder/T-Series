@@ -21,8 +21,11 @@ tgcrypto
 unidecode
 yt-dlp
 youtube-search
-youtube-search-python
-
-# Replacing broken py-tgcalls with working pytgcalls + ntgcalls fork
-pytgcalls==1.2.5
+# Use Git version of youtube-search-python (remove PyPI one to avoid conflict)
 git+https://github.com/CertifiedCoders/youtube-search-python.git@v1.6.6.post1
+
+# Use working alternative of pytgcalls
+py-tgcalls==1.2.9
+
+# Use public fork of ntgcalls
+git+https://github.com/TG-Musics/ntgcalls.git#egg=ntgcalls
