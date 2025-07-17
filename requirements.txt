@@ -25,4 +25,4 @@ youtube-search-python
 
 # Replacing broken py-tgcalls with working pytgcalls + ntgcalls fork
 pytgcalls==1.2.5
-git+https://github.com/callsmusic/ntgcalls#egg=ntgcalls
+git+https://github.com/CertifiedCoders/youtube-search-python.git@v1.6.6.post1
