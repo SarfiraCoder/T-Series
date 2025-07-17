@@ -1,14 +1,26 @@
-FROM nikolaik/python-nodejs:python3.10-nodejs19
+# Use an actively maintained image with Python 3.10 and Node.js 20
+FROM nikolaik/python-nodejs:python3.10-nodejs20
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends ffmpeg \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
+# Set working directory
 WORKDIR /app
+
+# Install required system dependencies (ffmpeg for audio processing)
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ffmpeg git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy all project files into the container
 COPY . .
 
-RUN pip3 install --no-cache-dir --upgrade pip \
-    && pip3 install --no-cache-dir --upgrade -r requirements.txt
+# Upgrade pip and install Python dependencies
+RUN python3 -m pip install --upgrade pip setuptools wheel && \
+    pip install -r requirements.txt
 
-CMD bash start
+# Set environment variable to ensure UTF-8
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    LANG=C.UTF-8
+
+# Start the bot (make sure you have a 'start' script or correct command)
+CMD ["bash", "start"]
