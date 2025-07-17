@@ -14,12 +14,12 @@
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "29475990",
+        "value": "19028663",
         "required": true
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "024abbe12f02bdd03e1e6494cd165504",
+        "value": "a9fa6b054131645b50e5758ccc841435",
         "required": true
       },
       "BOT_TOKEN": {
@@ -29,7 +29,7 @@
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "mongodb+srv://MrPerfectXd:MrPerfect@mrperfectxd.n6ldcxr.mongodb.net/?retryWrites=true&w=majority",
+        "value": "mongodb+srv://T-Series:TSeries9199@t-series.wgf2iqg.mongodb.net/?retryWrites=true&w=majority",
         "required": true
       },
       "OWNER_ID": {
@@ -44,7 +44,7 @@
       },
       "QUEUE_LIMIT": {
         "description": "Fill Queue Limit . Example - 15",
-        "value": "20",
+        "value": "30",
         "required": false
       },
       "HEROKU_API_KEY": {
