@@ -10,7 +10,6 @@ heroku3
 motor
 pillow==10.3.0
 psutil
-py-tgcalls==1.2.9
 pykeyboard
 pyrogram==2.0.106
 python-dotenv
@@ -23,3 +22,7 @@ unidecode
 yt-dlp
 youtube-search
 youtube-search-python
+
+# Replacing broken py-tgcalls with working pytgcalls + ntgcalls fork
+pytgcalls==1.2.5
+git+https://github.com/callsmusic/ntgcalls#egg=ntgcalls
